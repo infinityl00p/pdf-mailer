@@ -1,5 +1,8 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json({ type: 'application/json' }))
 
 require('./routes/order_routes')(app);
 
